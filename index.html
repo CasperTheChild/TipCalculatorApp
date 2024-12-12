@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script defer src="./main.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="Beginning">
+      <img src="./images/logo.svg">
+    </div>
+    <section class="Calculator">
+      <section class="InputData">
+        <div class="BillMoney">
+          <div class="wrapper FlexTwoEnds">
+            <label for="bill" class="HalfBottomMargin">Bill</label>
+            <span class="error-message bill-error">Can't be zero</span>
+          </div>
+          <div class="InputLine SmallBorderRadius">
+            <img src="./images/icon-dollar.svg" alt="Dollar Icon">
+            <input id="bill" class="SmallBorderRadius" type="number" placeholder="0" required>
+          </div>
+        </div>
+        <section class="TipPercent">
+          <div class="wrapper FlexTwoEnds">
+            <label for="customPercent" class="Tip">Select Tip %</label>
+            <span class="error-message percent-error">Must be selected</span>
+          </div>
+            <section class="TipsGridContainer">
+              <button class="PercentButton SmallBorderRadius HalfBottomMargin" data-percent="5">5%</button>
+              <button class="PercentButton SmallBorderRadius HalfBottomMargin" data-percent="10">10%</button>
+              <button class="PercentButton SmallBorderRadius HalfBottomMargin" data-percent="15">15%</button>
+              <button class="PercentButton SmallBorderRadius HalfBottomMargin" data-percent="25">25%</button>
+              <button class="PercentButton SmallBorderRadius HalfBottomMargin" data-percent="50">50%</button>
+              <input id="customPercent" class="PercentCustomButton SmallBorderRadius HalfBottomMargin" type="number" placeholder="Custom">
+          </section>          
+        </section>
+        <section class="PeopleNum">
+          <div class="wrapper FlexTwoEnds">
+            <label for="person" class="HalfBottomMargin">Number of People</label>
+            <span class="error-message people-error">Can't be zero</span>
+          </div>
+          <p></p>
+          <div class="InputLine SmallBorderRadius">
+            <img src="./images/icon-person.svg" alt="Person Image">  
+            <input id="person" class="SmallBorderRadius PeopleNumInput" type="number" placeholder="0" required>
+          </div>
+        </section>
+      </section>
+      <section class="OutputData">
+        <div class="Results">
+          <section class="TipAmount FlexTwoEnds">
+            <div class="RaWords">
+              <h1 class="White ">Tip Amount</h1>
+              <p class="PerPerson ">/ person</p>
+            </div>
+            <div class="ResultNumber">
+              <p class="ResultCalculation TipInDollars">$0.00</p>
+            </div>
+          </section>
+          <section class="Total FlexTwoEnds">
+            <div class="RaWords">
+              <h1 class="White">Total</h1>
+              <p class="PerPerson">/ person</p>
+            </div>
+            <div class="ResultNumber">
+              <p class="ResultCalculation TotalInDollars">$0.00<p>
+            </div>
+          </section>
+        </div>
+        <button class="Reset SmallBorderRadius">Reset</button>
+      </section>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/CasperTheChild">CasperTheKid</a>.
+  </div>
+</body>
+</html>

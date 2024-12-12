@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root, ::after, ::before {
+    box-sizing: border-box;
+}
+
+:root {
+    /*      Primary     */
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /*      Neutral     */
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    --Red-error: #E17457;
+
+    /*      Font        */
+
+    --font-weight: 700;
+    font-size: 1px;
+
+    /*      Box     */
+
+    --Margin-bottom: 0.5em;
+}
+
+main * {
+    box-sizing: border-box;
+
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    font-family: "Space Mono";
+    font-size: 16rem;
+    font-weight: var(--font-weight);
+
+    color: var(--Dark-grayish-cyan);
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--Light-grayish-cyan);
+}
+
+.InputLine {
+    display: flex;
+    align-items: center;
+
+    gap: 18rem;
+
+    width: 100%;
+    min-height: 24rem;
+    padding: 6rem 18rem;
+    margin-top: 6rem;
+
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.error-message {
+    display: none;
+}
+
+.error {
+    display: block;
+    color: var(--Red-error);
+}
+
+.ErrorBorder {
+    border: 3px solid var(--Red-error);
+}
+
+.active {
+    display: block;
+}
+
+.correct {
+    border: 3px solid var(--Strong-cyan);
+}
+
+input {
+    font-size: 24rem;
+
+    width: 100%;
+
+    flex-grow: 1;
+
+    text-align: right;
+
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+input[type="number"] {
+    border: none;
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.SmallBorderRadius {
+    border-radius: 5rem;
+}
+
+.HalfBottomMargin {
+    margin-bottom: var(--Margin-bottom);
+}
+
+.Beginning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 144rem;
+    max-height: 271.5rem;
+}
+
+.Calculator {
+    min-width: 375rem;
+    max-width: 920rem;
+    margin: 0 auto;
+    padding: 1rem;          /*      If padding is zero, the margin of ".Output" will go out of its parent ".Calculator"     */
+
+    background-color: var(--White);
+    
+    border-top-left-radius: 25rem;
+    border-top-right-radius: 25rem;
+}
+
+.InputData {
+    padding: 32rem;
+}
+
+.BillMoney {
+    margin-bottom: 36rem;
+}
+
+.TipsGridContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 16rem 17rem;
+    
+    margin-top: 16rem;
+    margin-bottom: 36rem;
+}
+
+.TipsGridContainer * {
+    font-size: 24rem;
+
+    padding: 12rem;
+    line-height: 1;      /*      Line height is automatically been set 1.2 * font-size?      */
+
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+
+    transition-property: backgroundColor;
+    transition-property: color;
+}
+
+.TipsGridContainer .active {       /*      When the buttons are clicked        */
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.TipsGridContainer input {
+    max-height: 48rem;
+
+    text-align: center;     /*      I don't really know how to make it print from the right side not center     */
+}  
+
+.PercentCustomButton {
+    color: var(--Dark-grayish-cyan) !important;
+    background-color: var(--Very-light-grayish-cyan) !important;
+}
+
+.OutputData {
+    display: flex;
+    flex-direction: column;
+
+    padding: 23rem;
+    margin: 24rem;
+
+    border-radius: 15rem;
+
+    background-color: var(--Very-dark-cyan);
+}
+
+.Beginning {
+    padding-bottom: 24rem;      /*      Didn't know how to fix it for mobile-version. You can see the mistake if you delete this line.       */
+}
+
+.Results {
+    margin-bottom: 32rem;
+}
+
+.TipAmount {
+    margin-bottom: 20rem;
+}
+
+.FlexTwoEnds {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RaWords {
+    align-self: center;
+}
+
+.Results h1 {
+    font-size: 16rem;
+    color: var(--White);
+}
+
+.Results p {
+    font-size: 13rem;
+}
+
+.ResultNumber {
+    display: flex;
+}
+
+.ResultNumber img {
+    max-height: 28rem;
+    max-width: 18rem;       /*      Didn't what to do with it;(     */
+    align-self: center;
+}
+
+.ResultNumber p {
+    font-size: 48rem;
+
+    line-height: 48rem;
+
+    color: var(--Strong-cyan);
+}
+
+.Reset {
+    font-size: 20rem;
+
+    line-height: 30rem;
+    width: 100%;
+    padding: 9rem;
+
+    margin-top: auto;
+
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+
+    transition-property: backgroundColor;
+    cursor: pointer;
+}
+
+.Reset:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media (min-width: 1000px) {
+    .Calculator {
+        display: flex;
+
+        border-radius: 25rem;
+    }
+
+    .TipsGridContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .TipsGridContainer * {
+        max-width: 117rem;
+    }
+
+    .OutputData {
+        flex-grow: 1;
+        padding: 40rem;
+    }
+}
